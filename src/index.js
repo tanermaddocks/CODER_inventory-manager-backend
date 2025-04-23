@@ -1,9 +1,13 @@
 const express = require("express");
 
+const itemRoutes = require("./routes/items.js");
+
 const app = express();
 
 // Middlewares
 app.use(express.json());
+app.use("/items", itemRoutes);
+
 
 // Default route
 app.get("/", (request, response) => {
@@ -12,8 +16,11 @@ app.get("/", (request, response) => {
 
 app.get("/health", (request, response) => {
   response.json({
-      status: "OK"
+    status: "OK"
   });
 });
+
+
+
 
 module.exports = app;
