@@ -1,23 +1,27 @@
 {
   "name": "inventory-manager",
   "version": "1.0.0",
+  "description": "Creating a simple Inventory Manager API, primarily focusing on testing",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
-    "dev": "node --watch src/server.js",
-    "test": "jest"
+    "test": "jest",
+    "dev": "node src/server.js --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tanermaddocks/inventory-manager-backend.git"
+    "url": "git+https://github.com/APaud3l/inventory-manager-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/tanermaddocks/inventory-manager-backend/issues"
+    "url": "https://github.com/APaud3l/inventory-manager-backend/issues"
   },
-  "homepage": "https://github.com/tanermaddocks/inventory-manager-backend#readme",
-  "description": "",
+  "homepage": "https://github.com/APaud3l/inventory-manager-backend#readme",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
