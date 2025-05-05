@@ -1,0 +1,28 @@
+name: Build and Deploy Express App on Render
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Install Dependencies
+        run: npm install
+    
+      - uses: JorgeLNJunior/render-deploy-action@v1.0.0
+        with:
+          render_api_key: ${{ secrets.RENDER_API_KEY }}
+          service_id: ${{ secrets.RENDER_SERVICE_ID }}
+          clear_cache: true
+          wait_deploy: true
+          github_deployment: true
+          deployment_environment: "production"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
