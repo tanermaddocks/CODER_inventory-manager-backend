@@ -17,7 +17,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
     
-      - uses: JorgeLNJunior/render-deploy-action@v1.0.0
+      - uses: JorgeLNJunior/render-deploy-action@v1.4.5
         with:
           render_api_key: ${{ secrets.RENDER_API_KEY }}
           service_id: ${{ secrets.RENDER_SERVICE_ID }}
